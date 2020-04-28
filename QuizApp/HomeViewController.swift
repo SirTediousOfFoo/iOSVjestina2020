@@ -7,13 +7,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
+    @IBOutlet weak var getQuizButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        initialSetup()
+
     }
 
-
+    private func initialSetup() {
+        getQuizButton.layer.cornerRadius = 10
+    }
 }
 
