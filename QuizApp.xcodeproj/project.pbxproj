@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		52383AFB245862F1006CEFE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52383AFA245862F1006CEFE7 /* AppDelegate.swift */; };
-		52383AFD245862F1006CEFE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52383AFC245862F1006CEFE7 /* SceneDelegate.swift */; };
 		52383AFF245862F1006CEFE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52383AFE245862F1006CEFE7 /* ViewController.swift */; };
 		52383B02245862F1006CEFE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52383B00245862F1006CEFE7 /* Main.storyboard */; };
 		52383B04245862F5006CEFE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52383B03245862F5006CEFE7 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		52383AF7245862F1006CEFE7 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52383AFA245862F1006CEFE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		52383AFC245862F1006CEFE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		52383AFE245862F1006CEFE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52383B01245862F1006CEFE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52383B03245862F5006CEFE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				52383AFA245862F1006CEFE7 /* AppDelegate.swift */,
-				52383AFC245862F1006CEFE7 /* SceneDelegate.swift */,
 				52383AFE245862F1006CEFE7 /* ViewController.swift */,
 				52383B00245862F1006CEFE7 /* Main.storyboard */,
 				52383B03245862F5006CEFE7 /* Assets.xcassets */,
@@ -139,7 +136,6 @@
 			files = (
 				52383AFF245862F1006CEFE7 /* ViewController.swift in Sources */,
 				52383AFB245862F1006CEFE7 /* AppDelegate.swift in Sources */,
-				52383AFD245862F1006CEFE7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +281,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = QuizApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +299,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = QuizApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
