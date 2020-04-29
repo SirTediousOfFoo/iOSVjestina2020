@@ -9,8 +9,15 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var getQuizButton: UIButton!
+    //MARK:- Properties
+    var quizzes: Quizes?
     
+    //MARK:- Outlets
+    @IBOutlet weak var getQuizButton: UIButton!
+    @IBOutlet weak var quizTableView: UITableView!
+    @IBOutlet weak var errorView: UIView!
+    
+    //MARK:- Lifecycle functions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,6 +27,9 @@ class HomeViewController: UIViewController {
 
     private func initialSetup() {
         getQuizButton.layer.cornerRadius = 10
+        //TODO:- getQuizes goes here
+        quizTableView.isHidden = true
+        errorView.isHidden = true
     }
 }
 

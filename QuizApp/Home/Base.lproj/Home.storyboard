@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="QuizApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="DEx-Bl-YbJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PopQuiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZNR-Kx-zev">
+                                <rect key="frame" x="156" y="69" width="102.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fj-x6-RBE">
+                                <rect key="frame" x="57" y="119" width="300" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="85L-9W-AVh"/>
+                                    <constraint firstAttribute="height" constant="40" id="xwC-81-ziy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Get Quiz">
+                                    <color key="titleColor" red="0.3138680458" green="0.24031475190000001" blue="0.5649048686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" red="0.24927401539999999" green="0.01415145118" blue="0.37870806460000001" alpha="0.58628531678082196" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hzN-dF-6yl" userLabel="Quiz Table View">
+                                <rect key="frame" x="8" y="179" width="398" height="603"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NSc-Gs-5wn">
+                                        <rect key="frame" x="0.0" y="28" width="398" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NSc-Gs-5wn" id="4IJ-MV-NQl">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uQY-gi-e3z" userLabel="Error View">
+                                <rect key="frame" x="117" y="348" width="180" height="200"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Quo-2E-xqs">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ErrorGlyph" translatesAutoresizingMaskIntoConstraints="NO" id="oVQ-WZ-AQu">
+                                                <rect key="frame" x="56.5" y="0.0" width="67" height="93.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCb-yO-Tze">
+                                                <rect key="frame" x="58" y="93.5" width="64" height="49"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data can't be reached. Please try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOq-tr-FxU">
+                                                <rect key="frame" x="1.5" y="142.5" width="177.5" height="57.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="AKy-Kk-ESA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Quo-2E-xqs" secondAttribute="trailing" id="B2a-35-yaw"/>
+                                    <constraint firstItem="Quo-2E-xqs" firstAttribute="leading" secondItem="uQY-gi-e3z" secondAttribute="leading" id="PZj-dn-Ldj"/>
+                                    <constraint firstItem="Quo-2E-xqs" firstAttribute="top" secondItem="uQY-gi-e3z" secondAttribute="top" id="Sux-As-hZA"/>
+                                    <constraint firstAttribute="bottom" secondItem="Quo-2E-xqs" secondAttribute="bottom" id="bc4-LA-EUR"/>
+                                    <constraint firstAttribute="height" constant="200" id="xGf-2H-NTh"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="P8s-Ck-kDP">
+                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZV-M7-eua">
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.3138680458" green="0.24031475190000001" blue="0.5649048686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="20" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="33" minY="-20" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Quiz" image="stopwatch">
+                                            <color key="titleColor" red="0.3138680458" green="0.24031475190000001" blue="0.5649048686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CY-Ni-Xdk">
+                                        <rect key="frame" x="138" y="0.0" width="138" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.3138680458" green="0.24031475190000001" blue="0.5649048686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="20" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="54" minY="-20" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Search" image="magnifyingglass">
+                                            <color key="titleColor" red="0.3138680458" green="0.24031475190000001" blue="0.5649048686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLQ-Me-y48">
+                                        <rect key="frame" x="276" y="0.0" width="138" height="80"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="0.3991696065" green="0.067306779280000006" blue="0.60592480959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="titleEdgeInsets" minX="-20" minY="20" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="56" minY="-20" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Settings" image="Settings">
+                                            <color key="titleColor" red="0.3138680458" green="0.24031475190000001" blue="0.5649048686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="BWg-qi-jTi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.24571814001501874" green="0.04182563071084143" blue="0.37216449873096447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P8s-Ck-kDP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2VC-63-DXs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P8s-Ck-kDP" secondAttribute="trailing" id="7th-5q-FFc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P8s-Ck-kDP" secondAttribute="bottom" id="CvK-eE-hqc"/>
+                            <constraint firstItem="ZNR-Kx-zev" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="DNX-fD-6ke"/>
+                            <constraint firstItem="DEx-Bl-YbJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IlR-aT-ufV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DEx-Bl-YbJ" secondAttribute="trailing" id="PDi-TA-J8B"/>
+                            <constraint firstItem="ZNR-Kx-zev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ues-wz-xBh"/>
+                            <constraint firstItem="uQY-gi-e3z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iiY-Fv-hin"/>
+                            <constraint firstItem="8fj-x6-RBE" firstAttribute="top" secondItem="ZNR-Kx-zev" secondAttribute="bottom" constant="20" id="jXx-0V-5lj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hzN-dF-6yl" secondAttribute="trailing" constant="8" id="kmx-pM-IQy"/>
+                            <constraint firstItem="hzN-dF-6yl" firstAttribute="top" secondItem="8fj-x6-RBE" secondAttribute="bottom" constant="20" id="lAS-Bk-7fG"/>
+                            <constraint firstItem="P8s-Ck-kDP" firstAttribute="top" secondItem="hzN-dF-6yl" secondAttribute="bottom" id="oSe-gw-cA2"/>
+                            <constraint firstItem="DEx-Bl-YbJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qoq-LB-CJ3"/>
+                            <constraint firstItem="hzN-dF-6yl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="qvh-rh-Ooq"/>
+                            <constraint firstAttribute="bottom" secondItem="DEx-Bl-YbJ" secondAttribute="bottom" id="rpz-Wt-AUE"/>
+                            <constraint firstItem="8fj-x6-RBE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vrE-j3-tvQ"/>
+                            <constraint firstItem="uQY-gi-e3z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xEh-1M-Zi4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorView" destination="uQY-gi-e3z" id="u3o-Uj-TgR"/>
+                        <outlet property="getQuizButton" destination="8fj-x6-RBE" id="21N-ap-yCp"/>
+                        <outlet property="quizTableView" destination="hzN-dF-6yl" id="xmS-zM-8DX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="375" height="818"/>
+        <image name="ErrorGlyph" width="67" height="67"/>
+        <image name="Settings" width="24" height="24"/>
+        <image name="magnifyingglass" width="16" height="16"/>
+        <image name="stopwatch" width="17" height="19"/>
+    </resources>
+</document>
