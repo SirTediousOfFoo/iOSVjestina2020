@@ -15,6 +15,7 @@
 		5268E5672459AD3A00CE3439 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268E5662459AD3A00CE3439 /* Question.swift */; };
 		5268E56A2459ADEE00CE3439 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268E5692459ADEE00CE3439 /* APIRequestManager.swift */; };
 		52D9303C2459B52E0004D24F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9303B2459B52E0004D24F /* HomeViewController.swift */; };
+		52D9303E245DABA60004D24F /* QuizCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9303D245DABA60004D24F /* QuizCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5268E5662459AD3A00CE3439 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		5268E5692459ADEE00CE3439 /* APIRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		52D9303B2459B52E0004D24F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		52D9303D245DABA60004D24F /* QuizCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				52D9303B2459B52E0004D24F /* HomeViewController.swift */,
 				52383B00245862F1006CEFE7 /* Home.storyboard */,
+				52D9303D245DABA60004D24F /* QuizCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52D9303E245DABA60004D24F /* QuizCell.swift in Sources */,
 				52D9303C2459B52E0004D24F /* HomeViewController.swift in Sources */,
 				5268E5672459AD3A00CE3439 /* Question.swift in Sources */,
 				5268E56A2459ADEE00CE3439 /* APIRequestManager.swift in Sources */,

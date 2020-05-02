@@ -7,11 +7,6 @@
 
 import Foundation
 
-// MARK: - Quizes
-struct Quizes: Codable, Equatable {
-    let quizzes: [Quiz]
-}
-
 // MARK: - Quiz
 struct Quiz: Codable, Equatable {
     let id: Int
