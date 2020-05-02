@@ -26,9 +26,9 @@ class HomeViewController: UIViewController {
     }
 
     private func initialSetup() {
-        getQuizButton.layer.cornerRadius = 10
+        getQuizButton.layer.cornerRadius = 20
         //TODO:- getQuizes goes here
-        quizTableView.isHidden = true
+        quizTableView.isHidden = false
         errorView.isHidden = true
         quizTableView.dataSource = self
         quizTableView.estimatedRowHeight = 140
@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
 //MARK:- TableView functions
 
 extension HomeViewController: UITableViewDelegate{
-    
+
 }
 
 extension HomeViewController: UITableViewDataSource{
