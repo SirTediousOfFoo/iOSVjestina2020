@@ -14,9 +14,11 @@ class HomeViewController: UIViewController {
     var quizList: [Quiz] = []
     
     //MARK:- Outlets
-    @IBOutlet weak var getQuizButton: UIButton!
-    @IBOutlet weak var quizTableView: UITableView!
-    @IBOutlet weak var errorView: UIView!
+    @IBOutlet private weak var getQuizButton: UIButton!
+    @IBOutlet private weak var quizTableView: UITableView!
+    @IBOutlet private weak var errorView: UIView!
+    @IBOutlet private weak var funFactView: UIView!
+    @IBOutlet weak var factCountLabel: UILabel!
     
     //MARK:- Lifecycle functions
     override func viewDidLoad() {
@@ -31,11 +33,12 @@ class HomeViewController: UIViewController {
         //TODO:- getQuizes goes here
         quizTableView.isHidden = true
         errorView.isHidden = true
+        funFactView.isHidden = true
         quizTableView.dataSource = self
-        
     }
     
-    @IBAction func didRequestQuizes(_ sender: Any) {
+    //MARK:- Functionality
+    @IBAction private func didRequestQuizes(_ sender: Any) {
         quizTableView.isHidden.toggle()
         quizTableView.reloadData()
         firstly{
@@ -47,11 +50,26 @@ class HomeViewController: UIViewController {
                 self?.quizList = quizes
                 self?.quizTableView.isHidden = false
                 self?.quizTableView.reloadData()
+                self?.funFactView.isHidden = false
+            let number = self?.countNBAs()
+            self?.factCountLabel.text = "There are \(number ?? 0) questions that contain the word 'NBA'"
            }.catch{ [weak self] error in
                 print(error.localizedDescription)
                 self?.quizTableView.isHidden = true
                 self?.errorView.isHidden = false
            }
+    }
+    
+    private func countNBAs() -> Int {
+        var occurences = 0
+        for quiz in quizList {
+            for q in quiz.questions {
+                if q.question.contains("NBA") {
+                    occurences += 1
+                }
+            }
+        }
+        return occurences
     }
 }
 

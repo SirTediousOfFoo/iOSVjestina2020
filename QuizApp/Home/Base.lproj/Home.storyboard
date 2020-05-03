@@ -16,6 +16,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TiO-5W-qd0" customClass="QuestionView" customModule="QuizApp" customModuleProvider="target">
+                                <rect key="frame" x="20" y="384" width="374" height="247"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="DEx-Bl-YbJ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
@@ -47,6 +51,9 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💡Fun fact:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ol-gN-Ge1">
                                         <rect key="frame" x="0.0" y="0.0" width="116.5" height="27.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="116.5" id="CaZ-8b-Bf1"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -251,10 +258,13 @@
                             <constraint firstItem="ZNR-Kx-zev" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="DNX-fD-6ke"/>
                             <constraint firstItem="DEx-Bl-YbJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IlR-aT-ufV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DEx-Bl-YbJ" secondAttribute="trailing" id="PDi-TA-J8B"/>
+                            <constraint firstItem="TiO-5W-qd0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Qtn-v2-8P1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TiO-5W-qd0" secondAttribute="trailing" constant="20" id="RUs-QO-jQ4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8fj-x6-RBE" secondAttribute="trailing" constant="25" id="UaI-Lf-2Ng"/>
                             <constraint firstItem="ZNR-Kx-zev" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ues-wz-xBh"/>
                             <constraint firstItem="mqF-r0-UBw" firstAttribute="top" secondItem="8fj-x6-RBE" secondAttribute="bottom" constant="15" id="ZMP-rS-HYJ"/>
                             <constraint firstItem="hzN-dF-6yl" firstAttribute="top" secondItem="mqF-r0-UBw" secondAttribute="bottom" constant="20" id="fYN-Ai-DkN"/>
+                            <constraint firstItem="TiO-5W-qd0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h3p-u7-seu"/>
                             <constraint firstItem="uQY-gi-e3z" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iiY-Fv-hin"/>
                             <constraint firstItem="8fj-x6-RBE" firstAttribute="top" secondItem="ZNR-Kx-zev" secondAttribute="bottom" constant="20" id="jXx-0V-5lj"/>
                             <constraint firstItem="mqF-r0-UBw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="kmf-cc-bNL"/>
@@ -265,12 +275,15 @@
                             <constraint firstItem="8fj-x6-RBE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="rJU-nj-M63"/>
                             <constraint firstAttribute="bottom" secondItem="DEx-Bl-YbJ" secondAttribute="bottom" id="rpz-Wt-AUE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mqF-r0-UBw" secondAttribute="trailing" constant="25" id="se9-AE-LKr"/>
+                            <constraint firstItem="TiO-5W-qd0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="t5t-IA-dTq"/>
                             <constraint firstItem="uQY-gi-e3z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xEh-1M-Zi4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="errorView" destination="uQY-gi-e3z" id="u3o-Uj-TgR"/>
+                        <outlet property="factCountLabel" destination="NJB-lm-3qe" id="o9A-EQ-9RH"/>
+                        <outlet property="funFactView" destination="mqF-r0-UBw" id="tCP-I9-oxl"/>
                         <outlet property="getQuizButton" destination="8fj-x6-RBE" id="21N-ap-yCp"/>
                         <outlet property="quizTableView" destination="hzN-dF-6yl" id="xmS-zM-8DX"/>
                     </connections>
