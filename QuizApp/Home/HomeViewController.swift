@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         initialSetup()
 
+        
     }
 
     private func initialSetup() {
@@ -78,6 +79,9 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Section"
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //
     }
 }
 

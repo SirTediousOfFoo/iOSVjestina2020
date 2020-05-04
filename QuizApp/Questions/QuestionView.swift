@@ -7,7 +7,6 @@
 
 import UIKit
 
-@IBDesignable
 class QuestionView: UIView {
     //MARK:- Properties
     var question: Question?
@@ -16,10 +15,24 @@ class QuestionView: UIView {
     //MARK:- Outlets
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet var answerButtons: [UIButton]!
+    @IBOutlet var view: UIView!
     
-    func loadViewFromNib() -> UIView? {
-           let bundle = Bundle(for: type(of: self))
-           let nib = UINib(nibName: nibName, bundle: bundle)
-           return nib.instantiate(withOwner: self, options: nil).first as? UIView
-       }
+    //MARK:- Initializers
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configure()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        configure()
+    }
+    
+    private func configure() {
+        Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
+        addSubview(view)
+        view.frame = self.bounds
+        view.layer.cornerRadius = 15
+    }
+    
 }

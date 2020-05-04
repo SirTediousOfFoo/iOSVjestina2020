@@ -11,16 +11,20 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionView" customModule="QuizApp" customModuleProvider="target">
             <connections>
                 <outlet property="questionLabel" destination="vpQ-Ub-3bD" id="og4-jk-zgH"/>
-                <outletCollection property="answerButtons" destination="rWE-R6-HR2" collectionClass="NSMutableArray" id="oiV-gL-n4D"/>
+                <outlet property="view" destination="Sjm-gU-wqo" id="ITW-dp-JDw"/>
+                <outletCollection property="answerButtons" destination="6lu-qW-vl7" collectionClass="NSMutableArray" id="Ur8-eG-O7i"/>
+                <outletCollection property="answerButtons" destination="Tpi-Jn-G6Z" collectionClass="NSMutableArray" id="KXy-Y2-5Es"/>
+                <outletCollection property="answerButtons" destination="rWE-R6-HR2" collectionClass="NSMutableArray" id="2en-qc-KJE"/>
+                <outletCollection property="answerButtons" destination="TcQ-HV-b3e" collectionClass="NSMutableArray" id="Q6p-7H-Q5f"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="Sjm-gU-wqo">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="356"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="25C-bE-BuN">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="356"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question text" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpQ-Ub-3bD">
                     <rect key="frame" x="25" y="30" width="325" height="24"/>
@@ -92,8 +96,9 @@
                 <constraint firstItem="25C-bE-BuN" firstAttribute="leading" secondItem="1SQ-Do-wSI" secondAttribute="leading" id="sPL-l2-kBe"/>
                 <constraint firstItem="1SQ-Do-wSI" firstAttribute="trailing" secondItem="25C-bE-BuN" secondAttribute="trailing" id="u2T-te-Aex"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="1SQ-Do-wSI"/>
-            <point key="canvasLocation" x="36" y="65.217391304347828"/>
+            <point key="canvasLocation" x="77.599999999999994" y="-82.758620689655174"/>
         </view>
     </objects>
     <resources>
